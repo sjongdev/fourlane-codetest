@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This sample excludes some optional fields and uses rate percent instead of rate.-->
+<InvoiceQueryRs statusCode="200" statusSeverity="Info" statusMessage="Request successful" retCount="1" iteratorRemainingCount="0" iteratorID="123e4567-e89b-12d3-a456-426614174000">
+    <InvoiceRet>
+        <TxnID>67890</TxnID>
+        <TimeCreated>2025-01-03T11:00:00</TimeCreated>
+        <TimeModified>2025-01-04T12:00:00</TimeModified>
+        <EditSequence>XYZ789</EditSequence>
+        <TxnNumber>2002</TxnNumber>
+        <CustomerRef>
+            <ListID>33333</ListID>
+            <FullName>Jane Smith</FullName>
+        </CustomerRef>
+        <!-- ClassRef omitted -->
+        <InvoiceLineRet>
+            <TxnLineID>67890-1</TxnLineID>
+            <ItemRef>
+                <ListID>44444</ListID>
+                <FullName>Widget B</FullName>
+            </ItemRef>
+            <Desc>Another sample description</Desc>
+            <Quantity>5</Quantity>
+            <UnitOfMeasure>Box</UnitOfMeasure>
+            <RatePercent>29.99</RatePercent>
+            <Amount>149.95</Amount>
+            <!-- Other1 and Other2 omitted -->
+        </InvoiceLineRet>
+        <InvoiceLineGroupRet>
+            <TxnLineID>67890-2</TxnLineID>
+            <ItemGroupRef>
+                <ListID>55555</ListID>
+                <FullName>Group A</FullName>
+            </ItemGroupRef>
+            <Desc>Group description</Desc>
+            <Quantity>3</Quantity>
+            <UnitOfMeasure>Pack</UnitOfMeasure>
+            <IsPrintItemsInGroup>true</IsPrintItemsInGroup>
+            <TotalAmount>89.97</TotalAmount>
+            <InvoiceLineRet>
+                <TxnLineID>67890-2-1</TxnLineID>
+                <ItemRef>
+                    <ListID>66666</ListID>
+                    <FullName>Sub-Widget</FullName>
+                </ItemRef>
+                <Desc>Sub-item description</Desc>
+                <Quantity>1</Quantity>
+                <RatePercent>29.99</RatePercent>
+                <Amount>29.99</Amount>
+            </InvoiceLineRet>
+            <!-- Inner DataExtRet omitted -->
+        </InvoiceLineGroupRet>
+        <DataExtRet>
+            <OwnerID>123e4567-e89b-12d3-a456-426614174003</OwnerID>
+            <DataExtName>CustomField3</DataExtName>
+            <DataExtType>AMTTYPE</DataExtType>
+            <DataExtValue>19.99</DataExtValue>
+        </DataExtRet>
+        <!-- Outer DataExtRet omitted -->
+    </InvoiceRet>
+</InvoiceQueryRs>

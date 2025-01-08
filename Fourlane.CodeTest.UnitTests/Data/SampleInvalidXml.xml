@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This sample includes all optional fields and uses rate instead of rate percent.-->
+<InvoiceQueryRs statusCode="200" statusSeverity="Info" statusMessage="Request successful" retCount="1" iteratorRemainingCount="0" iteratorID="123e4567-e89b-12d3-a456-426614174000">
+    <InvoiceRet>
+        <TxnID>12345
+        <TimeCreated>2025-01-01T10:00:00</TimeCreated>
+        <TimeModified>2025-01-02T10:00:00</TimeModified>
+        <EditSequence>ABC123</EditSequence>
+        <TxnNumber>1001</TxnNumber>
+        <CustomerRef>
+            <ListID>11111</ListID>
+            <FullName>John Doe</FullName>
+        </CustomerRef>
+        <ClassRef>
+            <ListID>22222</ListID>
+            <FullName>Sales</FullName>
+        </ClassRef>
+        <InvoiceLineRet>
+            <TxnLineID>12345-1</TxnLineID>
+            <ItemRef>
+                <ListID>33333</ListID>
+                <FullName>Widget A</FullName>
+            </ItemRef>
+            <Desc>Sample description</Desc>
+            <Quantity>10</Quantity>
+            <UnitOfMeasure>Each</UnitOfMeasure>
+            <OverrideUOMSetRef>
+                <ListID>44444</ListID>
+                <FullName>Set A</FullName>
+            </OverrideUOMSetRef>
+            <Rate>19.99</Rate>
+            <ClassRef>
+                <ListID>55555</ListID>
+                <FullName>Office Supplies</FullName>
+            </ClassRef>
+            <Amount>199.90</Amount>
+            <Other1>Note 1</Other1>
+            <Other2>Note 2</Other2>
+            <DataExtRet>
+                <OwnerID>123e4567-e89b-12d3-a456-426614174001</OwnerID>
+                <DataExtName>CustomField1</DataExtName>
+                <DataExtType>STR255TYPE</DataExtType>
+                <DataExtValue>Custom value 1</DataExtValue>
+            </DataExtRet>
+        </InvoiceLineRet>
+        <DataExtRet>
+            <OwnerID>123e4567-e89b-12d3-a456-426614174002</OwnerID>
+            <DataExtName>CustomField2</DataExtName>
+            <DataExtType>STR255TYPE</DataExtType>
+            <DataExtValue>Custom value 2</DataExtValue>
+        </DataExtRet>
+    </InvoiceRet>
+</InvoiceQueryRs>
